@@ -1,0 +1,383 @@
+@import url('https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Rubik+Wet+Paint&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Rubik+Wet+Paint&display=swap');
+* {
+    margin : 0;
+    padding : 0;
+    box-sizing: border-box;
+    list-style : none;
+    font-family: Inter
+    
+    
+}
+body {
+    max-width: 1440px;
+    height: 2042px;
+    background-color: #191B20;
+    color:white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* TOP CONTAINER */
+.top-container {
+    background-color: #141517;
+    width: 1440px;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding : 0 20px;
+}
+.title h1 {
+    font-family: Inria Sans, sans-serif;
+    font-weight: 700;
+    font-size: 36px;
+    margin-left: 180px;
+}
+.title h1 span {
+    color : red;
+}
+.menu {
+    padding : 0 100px;
+}
+.list {
+    display: flex;
+    gap:35px;
+    font-size: 14px;
+}
+
+
+/* BOUTON DE RECHERCHE */
+
+.movieSearch {
+    width: 272px;
+    height: 44px;
+    border-radius: 8px;
+    position: absolute;
+    top: 173px;
+    left: 584px;
+    display: flex;
+    align-items: center;
+}
+.search {
+    height:44px;
+    text-align: center;
+    border-radius: 8px;
+}
+.search:nth-child(2) {
+    background-color: red;
+    height: 44px;
+    width: 44px;
+
+}
+.search:nth-child(2)::after {
+    content: '→'; /* Code de la flèche vers la droite */
+    font-size: 16px;
+    color: white; /* Couleur de la flèche */
+}
+
+
+/*  DIV RESULTATS DE RECHERCHE */
+
+.swiper-container {
+    width: 1075px;
+    height: 380px;
+    margin-top: 200px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    position: relative;
+    
+}
+.swiper-container h1 {
+    color:white;
+    font-weight: 400;
+    font-size: 16px;
+    margin-left: 41px;
+    position: absolute;
+
+}
+
+.swiper-wrapper {
+    width: 1075px;
+    height:380px;
+    
+}
+
+.swiper-slide {
+    width:234px;
+    height:351px;
+    margin-top: 20px;
+    padding: 5px;
+    position: relative;
+}
+
+.swiper-slide img {
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    position: absolute;
+}
+/* HOVER */
+
+.movie-info {
+    background-color: rgba(0, 0, 0, 0.82);
+    width: 100%;
+    height: 100%;
+    padding-top: 30px;
+    padding-bottom: 50px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    opacity: 0;
+    z-index: 20;
+}
+.movie-info h3 {
+    color:#B0B0B0;
+}
+.movie-info h4 {
+    color:white;
+}
+.movie-info span {
+    color:#CC0000;
+    width: 35px;
+    height:34px;
+    font-size: 45px;
+}
+.movie-info p {
+    font-size: 32px;
+    color:#CC0000;
+}
+.swiper-slide:hover .movie-info {
+    opacity: 1; 
+}
+
+
+
+.swiper-button-next,
+.swiper-button-prev {
+    background: none !important; /* Retire la flèche par défaut */
+    color: rgb(255, 255, 255) !important; /* Garde les flèches blanches */
+    border-radius: 8px !important;
+    width: 28px !important;
+    height:28px !important;
+}
+
+/* Ajoute tes flèches personnalisées */
+.swiper-button-next::after {
+    content: '→' !important; /* Flèche droite */
+    font-size: 18px !important;
+}
+
+.swiper-button-prev::after {
+    content: '←' !important; /* Flèche gauche */
+    font-size: 12px!important;
+}
+
+
+
+/* DIV LATEST RELEASES */
+
+.latestReleases {
+    width: 1075px;
+    height:380px;
+    margin-top: 100px;
+    border: 1px solid white;
+}
+.latestReleases h1 {
+    color:white;
+    font-weight: 400;
+    font-size: 16px;
+    margin-left: 41px;
+}
+.swiper-container-latest {
+    width: 1075px;
+    height: 380px;
+    margin-top: 200px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    position: relative;
+    
+}
+.swiper-container-latest h1 {
+    color:white;
+    font-weight: 400;
+    font-size: 16px;
+    margin-left: 41px;
+    position: absolute;
+
+}
+
+/* DIV MOVIES BY GENRE TAB */
+
+.moviesByGenre {
+    width: 1075px;
+    height:519px;
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.moviesByGenre p {
+    color:white;
+    font-weight: 400;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+.tabs {
+    width: 595px;
+    height:49px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 25px;
+    padding-bottom: 30px;
+    border-bottom: 2px solid white;
+}
+.tab {
+    background-color: #191B20;
+    color:white;
+    border:none;
+    width: 84px;
+    height: 33px;
+}
+.active {
+    background-color: red;
+    border-radius: 8px;
+}
+
+.swiper-container-genre {
+    width: 1075px;
+    height: 380px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    position: relative;
+}
+.movie-info p {
+    font-size: 32px;
+    color:#CC0000;
+}
+
+
+
+/* DERNIRE DIV */
+
+.last-container {  
+    background-color: #141517;
+    width: 1440px;
+    height: 186px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding : 0 20px;
+    margin-top: 75px;
+}
+.p {
+    padding-right: 100px;
+    font-family: Inria Sans, sans-serif;
+    color:#B8B8B8;
+    font-size: 14px;
+}
+
+
+
+html {
+    scroll-behavior: smooth;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+.overlay {
+    background-color: rgba(0, 0, 0, 0.53);
+    width: 1440px;
+    height: 2042px;
+    position: absolute;
+    z-index: 100;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+.pop-up {
+    background-color: black;
+    width: 742px;
+    height: 512px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 50px;
+}
+.imageFilm {
+    width: 234px;
+    height: 351px;
+    grid-column: 1;
+    grid-row: 1 / 3;
+}
+.imageFilm img {
+    width: 100%;
+    height: 100%;
+}
+.infoTop {
+    grid-column: 2;
+    grid-row: 1;
+    width: 350px;
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+}
+.infoTop h1 {
+    font-size: 20px;
+    color:#CC0000;
+    font-family: Inria Sans, sans-serif;
+    font-weight: 700;
+
+}
+.dateMovie {
+    font-size: 14px;
+    padding-bottom: 10px;
+}
+
+.memeLigne {
+    display: flex;
+    align-items: center;
+    gap:5px;
+    padding-bottom: 10px;
+}
+.notes {
+    color:red;
+    font-size: 25px;
+    margin:0;
+}
+.infoTop span {
+    color:red;
+    font-size: 20px;
+}
+.infoTop h2 {
+    font-size: 14px;
+    font-family: Inria Sans, sans-serif;
+    font-weight: 700;
+}
+
+
+.desc {
+    
+    grid-column: 2;
+    grid-row: 2;
+    width: 350px;
+    height: auto;
+    font-size: 14px;
+    color:white;
+    font-family: Inria sans, sans-serif;
+    font-weight: 300;
+    line-height: 24px;
+}
+.desc p {
+    padding-top: 5px;
+}
+
