@@ -381,3 +381,80 @@ a {
     padding-top: 5px;
 }
 
+/* .test {
+    background-color: blue;
+    width: 1000px;
+    height: 1000px;
+} */
+
+.registerPopUp {
+    background-color: black;
+    width: 410px;
+    height: 608px;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 101;
+    top:200px;
+    
+}
+.rectangleDuHaut {
+    width: 288px;
+    height: 54px;
+    display: flex;
+    margin-bottom: 20px;
+    border: 3px solid white;
+    border-radius: 6px;
+}
+.signup {
+    width: 144px;
+    color: white;
+    background-color: black;
+}
+.login {
+    width: 144px;
+    color: white;
+    background-color: black;
+}
+.infosRegister {
+    width: 288px;
+    height: auto;
+    margin-bottom: 10px;
+}
+#username, #password{
+    width: 288px;
+    height: 44px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.loginButton {
+    width: 288px;
+    height: 47px;
+    background-color: red;
+    color: white;
+}
+.infosSupp {
+    width: 288px;
+}
+.forgotPassword {
+    color:red;
+    margin:10px;
+}
+.buttonSignUp {
+    color: red;
+}
+
+
+.overlayRegister {
+    background-color: rgba(0, 0, 0, 0.53);
+    width: 1440px;
+    height: 2042px;
+    position: absolute;
+    z-index: 100;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}

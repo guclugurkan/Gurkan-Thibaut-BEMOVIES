@@ -476,9 +476,29 @@ fetchGenreIDsForHover().then(genres => {
         })
 })
 
+// let testbutton = document.querySelector(".test");
+// testbutton.addEventListener("click", function() {
+//     const overlay = document.querySelector(".overlay");
+//                     overlay.style.display = "flex";
+// })
 
 
-
+let registerButtons = document.querySelectorAll(".registerButton");
+let registerPopUp = document.querySelector(".registerPopUp");
+registerButtons.forEach(function(button) {
+    button.addEventListener("click",function() {
+        registerPopUp.style.display = "flex";
+        const overlayRegister = document.querySelector(".overlayRegister");
+        overlayRegister.style.display = "flex";
+        
+        overlayRegister.addEventListener("click", function(event) {
+            if (event.target === overlayRegister) { // Vérifie que le clic a eu lieu directement sur l'overlay, pas sur un élément enfant
+                overlayRegister.style.display = "none";
+                registerPopUp.style.display = "none";
+            }
+        });
+    })
+})
 
 
 
